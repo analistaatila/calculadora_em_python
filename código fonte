@@ -1,0 +1,51 @@
+# Função para executar as operações matemáticas
+def calculadora():
+    print("Bem-vindo à Calculadora!")
+    print("Selecione a operação:")
+    print("1 - Soma")
+    print("2 - Subtração")
+    print("3 - Multiplicação")
+    print("4 - Divisão")
+    print("5 - Potência")
+    print("6 - Módulo (Resto da divisão)")
+    print("0 - Sair")
+
+    while True:
+        # Escolha da operação
+        operacao = input("\nDigite o número da operação: ")
+        
+        if operacao == "0":
+            print("Encerrando a calculadora... Até logo!")
+            break
+
+        # Pedir os números
+        num1 = float(input("Digite o primeiro número: "))
+        num2 = float(input("Digite o segundo número: "))
+
+        # Realizar a operação escolhida
+        if operacao == "1":
+            resultado = num1 + num2
+            print(f"Resultado da soma: {resultado}")
+        elif operacao == "2":
+            resultado = num1 - num2
+            print(f"Resultado da subtração: {resultado}")
+        elif operacao == "3":
+            resultado = num1 * num2
+            print(f"Resultado da multiplicação: {resultado}")
+        elif operacao == "4":
+            if num2 != 0:
+                resultado = num1 / num2
+                print(f"Resultado da divisão: {resultado}")
+            else:
+                print("Erro: Divisão por zero não permitida!")
+        elif operacao == "5":
+            resultado = num1 ** num2
+            print(f"Resultado da potência: {resultado}")
+        elif operacao == "6":
+            resultado = num1 % num2
+            print(f"Resultado do módulo: {resultado}")
+        else:
+            print("Operação inválida. Tente novamente.")
+
+# Chamar a função calculadora
+calculadora()
